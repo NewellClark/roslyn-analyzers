@@ -566,6 +566,39 @@ End Enum
                 GetCA2217BasicResultAt(22, 13, "LabelsClass", "2"));
         }
 
+        [Fact]
+        public async Task CSharp_EnumWithFlagsAttribute_BitshiftedValues_NoDiagnostic()
+        {
+            var code = @"
+[System.Flags]
+public enum BitShiftEnum
+{
+    None = 0,
+    One = 1 << 0,
+    Two = 1 << 1,
+    Four = 1 << 2,
+    Eight = 1 << 3,
+    Last = 1 << 4
+}";
+            await VerifyCS.VerifyAnalyzerAsync(code);
+        }
+
+        [Fact]
+        public async Task VisualBasic_EnumWithFlagsAttribute_BitshiftedValues_NoDiagnostic()
+        {
+            var code = @"
+<System.Flags>
+Public Enum BitShiftEnum
+    None = 0
+    One = 1 << 0
+    Two = 1 << 1
+    Four = 1 << 2
+    Eight = 1 << 3
+    Last = 1 << 4
+End Enum";
+            await VerifyVB.VerifyAnalyzerAsync(code);
+        }
+
         private static DiagnosticResult GetCA1027CSharpResultAt(int line, int column, string enumTypeName)
 #pragma warning disable RS0030 // Do not used banned APIs
             => VerifyCS.Diagnostic(EnumWithFlagsAttributeAnalyzer.Rule1027)
