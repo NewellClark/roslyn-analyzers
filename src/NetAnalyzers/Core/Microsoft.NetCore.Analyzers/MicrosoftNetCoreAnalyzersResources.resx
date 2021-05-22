@@ -1635,4 +1635,14 @@
   <data name="DoNotUseWhenAllWithSingleTaskFix" xml:space="preserve">
     <value>Replace 'WhenAll' call with argument</value>
   </data>
+  <data name="SealNonPublicTypesDescription" xml:space="preserve">
+    <value>You can improve performance by sealing types that do not need to be subclassed.</value>
+  </data>
+  <data name="SealNonPublicTypesMessage" xml:space="preserve">
+    <value>'{0}' can be safely sealed because it has no derived types inside its assembly and is not publicly-accessible</value>
+    <comment>0 = type that can be sealed</comment>
+  </data>
+  <data name="SealNonPublicTypesTitle" xml:space="preserve">
+    <value>Seal non-public types</value>
+  </data>
 </root>
