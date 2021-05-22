@@ -1977,6 +1977,21 @@
         <target state="translated">Проверка запросов SQL на уязвимости безопасности</target>
         <note />
       </trans-unit>
+      <trans-unit id="SealNonPublicTypesDescription">
+        <source>You can improve performance by sealing types that do not need to be subclassed.</source>
+        <target state="new">You can improve performance by sealing types that do not need to be subclassed.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SealNonPublicTypesMessage">
+        <source>'{0}' can be safely sealed because it has no derived types inside its assembly and is not publicly-accessible</source>
+        <target state="new">'{0}' can be safely sealed because it has no derived types inside its assembly and is not publicly-accessible</target>
+        <note>0 = type that can be sealed</note>
+      </trans-unit>
+      <trans-unit id="SealNonPublicTypesTitle">
+        <source>Seal non-public types</source>
+        <target state="new">Seal non-public types</target>
+        <note />
+      </trans-unit>
       <trans-unit id="SetHttpOnlyForHttpCookie">
         <source>Set HttpOnly to true for HttpCookie</source>
         <target state="translated">Установите для параметра HttpOnly объекта HttpCookie значение true</target>

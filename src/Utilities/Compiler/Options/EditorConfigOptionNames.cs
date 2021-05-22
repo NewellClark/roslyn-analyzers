@@ -204,5 +204,11 @@ namespace Analyzer.Utilities
         /// CA1826 (Do not use Enumerable methods on indexable collections. Instead use the collection directly).
         /// </summary>
         public const string ExcludeOrDefaultMethods = "exclude_ordefault_methods";
+
+        /// <summary>
+        /// Boolean option to configure whether to exclude assemblies that are marked with an <see cref="System.Runtime.CompilerServices.InternalsVisibleToAttribute"/>.
+        /// Configurable rule: CA1847 'Seal non-public types'
+        /// </summary>
+        public const string ExcludeAssembliesMarkedInternalsVisibleTo = "exclude_assemblies_marked_internals_visible_to";
     }
 }
